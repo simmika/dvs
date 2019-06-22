@@ -19,20 +19,20 @@ public class NaudotojuAdministravimasPage extends AbstractPage {
     private WebElement naudotojoVardasField;
     @FindBy(xpath = "//div[@id='newUserModal']//input[@name=\"password\"]")
     private WebElement slaptazodisField;
-    @FindBy(xpath = "//div[@id='newUserModal']//button[@class='btn button1 my-4'][contains(text(),'Išsaugoti')]")
+    @FindBy(xpath = "//div[@id='newUserModal']//div[@class='modal-content']//div[@class='modal-body']//div//button[@class='btn button1 my-4'][contains(text(),'Išsaugoti')]")
     private WebElement issaugotiButton;
     @FindBy(xpath = "//div[@id=\'userListTable\']//td[contains(text(),\'qw\')][1]")
     private WebElement usernameFromTable;
     @FindBy(xpath = "//div[@id=\'userListTable\']//td[2]")
     private WebElement VardasFromTable;
-    @FindBy(xpath = "//div[@id='userListTable']//tr[1]/td[5]/button[2]")
-    private WebElement grupesButton;
+    @FindBy(xpath = "//button[contains(text(),'Grup')]")
+    WebElement grupesButton;
     @FindBy(xpath = "//tr[2]//td[2]//button[1]")
     private WebElement grupesElementNepriklauso;
     @FindBy(xpath = "//tr[2]//td[1]")
     private WebElement grupesElementPriklauso;
     @FindBy(xpath = "//tr[2]//td[3]")
-    private WebElement groupName;
+     WebElement groupName;
     @FindBy(xpath = "//div[@id='editUserGroupsModal']//button[@class='close'][contains(text(),'×')]")
     private WebElement closePopupButton;
     @FindBy(xpath = "//tr[1]//td[4]")

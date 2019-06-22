@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 public class AbstractClassBeforeAfter {
     protected static WebDriver driver;
-    protected WebDriverWait wait = new WebDriverWait(driver, 2);
+    protected WebDriverWait wait = new WebDriverWait(driver, 10);
 
 
     @BeforeClass
