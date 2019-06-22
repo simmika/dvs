@@ -11,7 +11,8 @@ public class VisiDokumnentaiPage extends AbstractPage {
 
     @FindBy(xpath = "//a[contains(text(),'Sukurti dokumentai')]")
     private WebElement sukurtiDokumnetaiButton;
-    @FindBy(xpath = "//li[@class='next']//preceding::li[1]")
+//    @FindBy(xpath = "//li[@class='next']//preceding::li[1]")
+    @FindBy(xpath = "//tr[1]//td[1]")
     private WebElement lastDocumentTittle;
     @FindBy(xpath = "//a[contains(text(),'Pateikti dokumentai')]")
     private WebElement pateiktiDokumentaiButton;
