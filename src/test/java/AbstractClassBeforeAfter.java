@@ -2,11 +2,14 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
 public class AbstractClassBeforeAfter {
     protected static WebDriver driver;
+    protected WebDriverWait wait = new WebDriverWait(driver, 2);
+
 
     @BeforeClass
     public static void setUp() {
@@ -19,7 +22,7 @@ public class AbstractClassBeforeAfter {
 
     @AfterClass
     public static void closeBrowser() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(4000);
         driver.quit();
     }
 

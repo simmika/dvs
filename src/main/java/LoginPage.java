@@ -19,16 +19,15 @@ public class LoginPage extends AbstractPage {
     private WebElement logoText;
 
     public void fillUsernameFieldAsUser() {
-        usernameField.sendKeys("userUsername");
+        usernameField.sendKeys("petrauskas");
     }
 
     public void fillUsernameFieldAsAdmin() {
         usernameField.sendKeys("admin");
     }
 
-
     public void fillPasswordFieldAsUser() {
-        passwordField.sendKeys("userPassword");
+        passwordField.sendKeys("petrauskas");
     }
 
     public void fillPasswordFieldAsAdmin() {
@@ -46,6 +45,13 @@ public class LoginPage extends AbstractPage {
     public void loginAsAdmin() {
         fillUsernameFieldAsAdmin();
         fillPasswordFieldAsAdmin();
+        clickPrisijungtiButton();
+    }
+
+    public void loginAsUser() {
+
+        fillUsernameFieldAsUser();
+        fillPasswordFieldAsUser();
         clickPrisijungtiButton();
     }
 

@@ -22,25 +22,24 @@ public class NaudotojuAdministravimasPage extends AbstractPage {
     @FindBy(xpath = "//div[@id='newUserModal']//button[@class='btn button1 my-4'][contains(text(),'Išsaugoti')]")
     private WebElement issaugotiButton;
     @FindBy(xpath = "//div[@id=\'userListTable\']//td[contains(text(),\'qw\')][1]")
-//    @FindBy(xpath = "//td[text()[contains(.,"++")]]")
     private WebElement usernameFromTable;
     @FindBy(xpath = "//div[@id=\'userListTable\']//td[2]")
     private WebElement VardasFromTable;
     @FindBy(xpath = "//div[@id='userListTable']//tr[1]/td[5]/button[2]")
-    WebElement grupesButton;
+    private WebElement grupesButton;
     @FindBy(xpath = "//tr[2]//td[2]//button[1]")
-    WebElement grupesElementNepriklauso;
+    private WebElement grupesElementNepriklauso;
     @FindBy(xpath = "//tr[2]//td[1]")
-    WebElement grupesElementPriklauso;
+    private WebElement grupesElementPriklauso;
     @FindBy(xpath = "//tr[2]//td[3]")
-    WebElement groupName;
+    private WebElement groupName;
     @FindBy(xpath = "//div[@id='editUserGroupsModal']//button[@class='close'][contains(text(),'×')]")
-    WebElement closePopupButton;
+    private WebElement closePopupButton;
     @FindBy(xpath = "//tr[1]//td[4]")
-    WebElement naudotojoGrupesField;
+    private WebElement naudotojoGrupesField;
 
-    String randomUsername = "userNumber" + Math.round(Math.random() * 1000);
-    String groupNameText;
+    private String randomUsername = "userNumber" + Math.round(Math.random() * 1000);
+    private String groupNameText;
 
     public void clickIconNaudotojai() {
         iconNaudotojai.click();
@@ -61,7 +60,6 @@ public class NaudotojuAdministravimasPage extends AbstractPage {
     public void fillNaudotojoVardasField() {
         naudotojoVardasField.sendKeys(randomUsername);
     }
-
 
     public void fillSlaptazodisField() {
         slaptazodisField.sendKeys("password");
@@ -87,7 +85,6 @@ public class NaudotojuAdministravimasPage extends AbstractPage {
         return groupNameText;
     }
 
-
     public void clickGrupesElement() {
         grupesElementNepriklauso.click();
     }
@@ -95,6 +92,7 @@ public class NaudotojuAdministravimasPage extends AbstractPage {
     public void closePopup() {
         closePopupButton.click();
     }
+
     public String getNaudotojoGrupesFieldText() {
         return naudotojoGrupesField.getText();
     }

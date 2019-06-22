@@ -7,7 +7,7 @@ public class NaudotojuAdministravimasPageTest extends AbstractClassBeforeAfter {
     private LoginPage loginPage = new LoginPage(driver);
 
     @Test
-    public void createNewUser() {
+    public void createNewUser_TC08() {
         loginPage.loginAsAdmin();
         naudotojuAdministravimasPage.clickIconNaudotojai();
         naudotojuAdministravimasPage.clickRegistruotiNaujaNaudotojaButton();
@@ -20,13 +20,10 @@ public class NaudotojuAdministravimasPageTest extends AbstractClassBeforeAfter {
     }
 
     @Test
-    public void assignUserToGroup() throws InterruptedException {
-        Thread.sleep(3000);
+    public void assignUserToGroup_TC05() {
         naudotojuAdministravimasPage.clickGrupesButton();
-        Thread.sleep(3000);
         naudotojuAdministravimasPage.copyGroupName();
         naudotojuAdministravimasPage.clickGrupesElement();
-        Thread.sleep(3000);
         naudotojuAdministravimasPage.closePopup();
         Assert.assertEquals(naudotojuAdministravimasPage.getNaudotojoGrupesFieldText(), naudotojuAdministravimasPage.pasteGroupName());
     }

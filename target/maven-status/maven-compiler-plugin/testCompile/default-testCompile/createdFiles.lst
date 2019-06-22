@@ -1,0 +1,10 @@
+VisiDokumentaiPageTestAsUser.class
+SuiteAll.class
+SuiteTestsAsUser.class
+SuiteTestsAsAdmin.class
+LoginPageTestLoginAsAdmin.class
+AbstractClassBeforeAfter.class
+NaujoDokumentoKurimasPageTestAsAdmin.class
+NaujoDokumentoKurimasPageTestAsUser.class
+LoginPageTestLoginAsUser.class
+NaudotojuAdministravimasPageTest.class
